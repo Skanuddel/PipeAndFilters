@@ -1,0 +1,130 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="row" style="margin-top: 100px; height: fit-content; margin-bottom: 0px;">
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Data Source</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Pipe</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Filter</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Pipe</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Filter</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Pipe</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Filter</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Pipe</b>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <b>Data Sink</b>
+    </div>
+    <div class="col-3" style="display: flex; align-items: center; justify-content: center;">
+
+    </div>
+</div>
+<div class="row" style="margin-top: 0px; height: 100px; height: fit-content;">
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <div id="circle">
+        <p style="text-align: center;">{{ input }}</p>
+      </div>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <img src="static\arrow-right.png" style=" height: 12vh; height: 12vh; float: left;" alt="Pfeil">
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <div id="box">
+        {{ filter[0] }}
+      </div>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <img src="static\arrow-right.png" style=" height: 12vh; height: 12vh; float: left;" alt="Pfeil">
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <div id="box">
+        {{ filter[1] }}
+      </div>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <img src="static\arrow-right.png" style=" height: 12vh; height: 12vh; float: left;" alt="Pfeil">
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <div id="box">
+        {{ filter[2] }}
+      </div>
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <img src="static\arrow-right.png" style=" height: 12vh; height: 12vh" alt="Pfeil">
+    </div>
+    <div class="col-1" style="display: flex; align-items: center; justify-content: center;">
+      <div id="circle">
+        <p>{{ sink }}</p>
+      </div>
+    </div>
+    <div class="col-3" style="display: flex; align-items: center; justify-content: center;">
+
+    </div>
+</div>
+<div class="row" style="margin-top: 0px; vertical-align: top;">
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" height="20%">
+    {% if error is defined and error|length > 0 %}
+    {% if 0 in error %}
+        <img src="static\red_lightning.png" style="height: 150px; float: right; margin-right: 30px;" alt="Error">
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" height="20%">
+    {% if error is defined and error|length > 0 %}
+    {% if 1 in error %}
+        <img src="static\red_lightning.png" style="height: 150px; float: right; margin-right: 30px;" alt="Error">
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" height="20%">
+    {% if error is defined and error|length > 0 %}
+    {% if 2 in error %}
+        <img src="static\red_lightning.png" style="height: 150px; float: right; margin-right: 30px;" alt="Error">
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-1" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+  <div class="col-3" style="display: flex; align-items: center; justify-content: center; height: fit-content;">
+
+  </div>
+</div>
+{% endblock %}
