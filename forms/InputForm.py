@@ -1,10 +1,9 @@
-from email.policy import default
 from flask_wtf import FlaskForm
 from wtforms import IntegerField, validators, SelectField
 
 CHOICES = ["Double", "Halve", "Triple", "Multiply with -1", "Square Root"]
 
-class RechnerForm(FlaskForm):
+class InputForm(FlaskForm):
 
     input = IntegerField('Input:', [validators.InputRequired()])
 

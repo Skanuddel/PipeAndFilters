@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, request
-from forms.rechnerForm import RechnerForm
+from forms.InputForm import InputForm
 from flask_wtf.csrf import CSRFProtect
-from PipeAndFilter import *
+from PipesAndFilter import *
 import math
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ app.config.update(
 
 @app.route("/", methods=['GET', 'POST'])
 def main():
-    form = RechnerForm()
+    form = InputForm()
     if request.method == 'POST':
         input = form.input.data
         filter = [form.filter1.data, form.filter2.data, form.filter3.data]
