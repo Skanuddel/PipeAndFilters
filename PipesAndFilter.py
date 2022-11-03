@@ -39,7 +39,7 @@ def filter_halve(input):
 def filter_triple(input):
     return input * 3
 
-def filter_invert(input):
+def filter_minus_one(input):
     return input * -1
 
 def filter_square_root(input):

@@ -26,7 +26,7 @@ def main():
             elif f == "Triple":
                 pipe.add(filter_triple)
             elif f == "Multiply with -1":
-                pipe.add(filter_invert)
+                pipe.add(filter_minus_one)
             elif f == "Square Root":
                 pipe.add(filter_square_root)
         sink = pipe.execute()
