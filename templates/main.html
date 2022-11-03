@@ -39,6 +39,31 @@
           justify-content: center;
           align-items: center;
         }
+
+        #box_error {
+          background-color: red;
+          width: 100px;
+          height: 100px;
+          padding: 10px;
+          border: 3px black solid;
+          font-size: 20px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .child {
+        position: absolute;
+        margin: auto;
+        margin-bottom: 40%;
+        margin-right: 20px;
+        font-size: 26px;
+        }
+
+        .parent {
+        position: relative;
+        }
     </style>
 </head>
 
@@ -93,5 +118,12 @@
           </div>
         </div>
       </form>
-        {% block content %} {% endblock %}
+      {% if inputerror[0] == 1%}
+      <div class="alert alert-danger" role="alert" style="margin: 50px;">
+        <p class="text-center" style="font-size: 26px">
+          {{ inputerror[1] }}
+         </p>
+      </div>
+      {% endif %}
+      {% block content %} {% endblock %}
 </body>

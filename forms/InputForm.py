@@ -1,11 +1,11 @@
 from flask_wtf import FlaskForm
-from wtforms import IntegerField, validators, SelectField
+from wtforms import StringField, validators, SelectField
 
-CHOICES = ["Double", "Halve", "Triple", "Multiply with -1", "Square Root"]
+CHOICES = ["Double", "Halve", "Multiply with -1", "Square Root"]
 
 class InputForm(FlaskForm):
 
-    input = IntegerField('Input:', [validators.InputRequired()])
+    input = StringField('Input:', [validators.InputRequired()])
 
     filter1 = SelectField("Filter 1:", choices=CHOICES, default="Double")
 

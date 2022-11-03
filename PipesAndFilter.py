@@ -9,6 +9,7 @@ class Pipeline:
     def __init__(self, input):
         self.filters = list()
         self.input = input
+        self.interim = list()
         self.errors = list()
  
     def add(self, filter):
@@ -19,6 +20,7 @@ class Pipeline:
         i = 0
         for filter in self.filters:
             self.input = filter(self.input)
+            self.interim.append(round(self.input, 3))
             if math.isnan(self.input):
                 self.errors.append(i)
             i = i + 1
@@ -35,9 +37,6 @@ def filter_double(input):
  
 def filter_halve(input):
     return input / 2
-
-def filter_triple(input):
-    return input * 3
 
 def filter_minus_one(input):
     return input * -1
