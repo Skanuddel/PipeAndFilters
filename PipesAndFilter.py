@@ -11,6 +11,7 @@ class Pipeline:
         self.input = input
         self.interim = list()
         self.errors = list()
+        self.interim.append(input)
  
     def add(self, filter):
         self.filters.append(filter)
