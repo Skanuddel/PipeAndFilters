@@ -21,6 +21,7 @@ def main():
         input = form.input.data
         number_list = []
         try:
+            input = input.strip()
             number_list = input.split(" ")
             for i, n in enumerate(number_list):
                 if isinstance(n, int):
