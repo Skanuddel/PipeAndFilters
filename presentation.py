@@ -23,6 +23,7 @@ def main():
         try:
             input = input.strip()
             number_list = input.split(" ")
+            number_list[:] = (value for value in number_list if value != "")
             for i, n in enumerate(number_list):
                 if isinstance(n, int):
                     raise Exception('Not all characters are Integers!')
